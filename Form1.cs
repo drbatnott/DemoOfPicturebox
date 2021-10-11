@@ -23,6 +23,7 @@ namespace DemoOfPicturebox
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images (*.jpg)|*.jpg|(*.bmp)|*.bmp|(*.png)|*.png";
+            ofd.FilterIndex = 1;// start with jpg
             ofd.FileName = currentFileName;
             if (ofd.ShowDialog().Equals(DialogResult.OK))
             {
