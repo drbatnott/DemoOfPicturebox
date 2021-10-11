@@ -23,7 +23,12 @@ namespace DemoOfPicturebox
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images (*.jpg)|*.jpg";
-            ofd.ShowDialog();
+            ofd.FileName = currentFileName;
+            if (ofd.ShowDialog().Equals(DialogResult.OK))
+            {
+                currentFileName = ofd.FileName;
+                imagePictureBox.Image = new Bitmap(ofd.FileName);
+            }
         }
     }
 }
