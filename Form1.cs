@@ -22,7 +22,7 @@ namespace DemoOfPicturebox
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images (*.jpg)|*.jpg";
+            ofd.Filter = "Images (*.jpg)|*.jpg|(*.bmp)|*.bmp|(*.png)|*.png";
             ofd.FileName = currentFileName;
             if (ofd.ShowDialog().Equals(DialogResult.OK))
             {
